@@ -1,3 +1,25 @@
+package com.sap.cloud.sdk.tutorial.sdkapp;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
+import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.arquillian.test.api.ArquillianResource;
+import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+
+import java.net.URL;
+
+import com.sap.cloud.sdk.cloudplatform.logging.CloudLoggerFactory;
+import com.sap.cloud.sdk.testutil.MockUtil;
+
+import static io.restassured.RestAssured.when;
+
 @RunWith(Arquillian.class)
 public class BusinessPartnerServletTest {
     private static final MockUtil mockUtil = new MockUtil();
